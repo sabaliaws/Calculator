@@ -9,7 +9,7 @@ pipeline {
     stages {
        stage('GIT CHECKOUT') {
             steps {
-               checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sabaliaws/spring3-mvc-maven-xml-hello-world.git']]])
+               checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sabaliaws/Calculator.git']]])
             }
         }
         stage('BUILD') {
