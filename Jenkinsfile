@@ -12,11 +12,11 @@ pipeline {
                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sabaliaws/Calculator.git']]])
             }
         }
-        /*stage('BUILD') {
+        stage('BUILD') {
             steps {
                 sh "mvn clean package"
             }
-        }*/
+        }
         stage('Docker Build') {
            steps {
                sh 'docker build -t ads22/dockernew:7 .'
